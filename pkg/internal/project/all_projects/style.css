@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-image: url('../../../assets/background_image.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.page_components{
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+    justify-self: center;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    height: 230px;
+}
+
+.passports_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* две карточки в строке */
+    gap: 15px;
+    width: 450px;
+    margin: auto;
+}

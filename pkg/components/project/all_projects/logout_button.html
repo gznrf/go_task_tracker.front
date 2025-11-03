@@ -1,0 +1,29 @@
+<style>
+    .logout-btn {
+        background-color: #a9bbc2;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 60px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .logout-btn:hover {
+        background-color: #9fb2ba;
+        transform: translateY(-2px);
+    }
+</style>
+<body>
+<button class="logout-btn">Logout</button>
+<script>
+    const logoutBtn = document.querySelector('.logout-btn');
+    logoutBtn.addEventListener('click', () => {
+        console.log('Button clicked!');
+        window.location.href = "http://localhost:63342/go_task_tracker/front/pkg/internal/auth/login/page.html";
+    });
+</script>

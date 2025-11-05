@@ -13,7 +13,6 @@ body{
     background-attachment: fixed;
 }
 
-
 .page_components{
     display: flex;
     flex-direction: column;
@@ -24,7 +23,7 @@ body{
     justify-content: center;
     align-items: center;
 
-    width: 600px;
+    width: 260px;
     height: 230px;
 
 }
@@ -33,10 +32,12 @@ body{
     margin-top: 2vh;
 }
 
-.register_button_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 1vh;
+.buttons_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 250px;
+    margin: 2px auto;
+    padding: 2px;
 }
+

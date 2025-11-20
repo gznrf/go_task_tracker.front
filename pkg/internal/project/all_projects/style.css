@@ -24,7 +24,7 @@ body{
     align-items: center;
 
     width: 600px;
-    height: 230px;
+    height: 240px;
 }
 
 .passports_container{
@@ -33,6 +33,6 @@ body{
     gap: 15px;
     overflow-y: auto;
     width: 450px;
-    margin: 12px auto;
+    margin: 12px 12px;
     padding: 2px;
 }

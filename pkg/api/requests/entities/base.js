@@ -1,4 +1,3 @@
-import axios from "axios";
 import { defaultRoute } from '../../routes/routes.js';
 
 

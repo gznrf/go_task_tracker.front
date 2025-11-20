@@ -5,7 +5,7 @@ import {boardRoutes} from './entities/board.js';
 import {columnRoutes} from './entities/column.js';
 import {taskRoutes} from './entities/task.js';
 
-export const defaultRoute = "http://195.133.77.31:8231"
+export const defaultRoute = ""
 
 export const entitiesRoutes = {
     authRoutes,

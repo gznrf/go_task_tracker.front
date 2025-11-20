@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: task_tracker_front
     ports:
-      - "8081:80"
+      - "3321:80"
     networks:
       - tracker_network
 

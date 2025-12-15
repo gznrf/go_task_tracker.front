@@ -9,3 +9,5 @@ export const pagesRoutes = {
     "/boards": "../internal/",
     "/board": "../internal/",
 }
+
+

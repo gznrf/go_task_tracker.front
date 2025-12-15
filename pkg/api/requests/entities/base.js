@@ -4,7 +4,7 @@ import { defaultRoute } from '../../routes/routes.js';
 
 const BaseRequest = axios.create({
     baseURL: defaultRoute,
-    withCredentials: true,
+    //withCredentials: true,
     headers: {
         "Content-Type": "application/json",
     },

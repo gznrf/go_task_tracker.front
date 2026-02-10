@@ -1,0 +1,133 @@
+/* Контейнер всей доски */
+.kanban-board {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    align-items: flex-start;
+    overflow-x: auto; /* Горизонтальный скролл */
+    height: calc(100vh - 150px); /* Чтобы доска занимала почти весь экран */
+}
+
+/* Стилизация скроллбара для горизонтальной доски */
+.kanban-board::-webkit-scrollbar { height: 8px; }
+.kanban-board::-webkit-scrollbar-track { background: var(--bg); }
+.kanban-board::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+/* Колонка */
+.kanban-column {
+    background: #161b22;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    width: 320px;
+    min-width: 320px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border);
+}
+
+.column-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Кнопка добавления задачи в колонке */
+.add-task-inline {
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+
+.add-task-inline:hover { color: var(--accent); }
+
+/* Список задач внутри колонки */
+.task-list {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+}
+
+/* Карточка задачи */
+.task-card {
+    background: #21262d;
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.task-card:hover {
+    border-color: var(--accent);
+    transform: scale(1.02);
+}
+
+.task-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.task-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Обрезаем текст до 2 строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.task-num {
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.dragging {
+    opacity: 0.4;
+    border: 2px dashed var(--accent) !important;
+}
+
+.col-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.del-col-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.del-col-btn:hover { color: var(--error); }
+
+.task-card {
+    position: relative;
+    user-select: none; /* Чтобы текст не выделялся при перетаскивании */
+}
+
+.empty-tasks {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 10px;
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+}
